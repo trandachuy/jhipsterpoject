@@ -2,7 +2,7 @@
 
 node {
     stage('checkout') {
-        checkout scm
+        git 'https://github.com/trandachuy/jhipsterpoject.git'
     }
 
     docker.image('jhipster/jhipster:v7.9.3').inside('-u jhipster -e MAVEN_OPTS="-Duser.home=./"') {
